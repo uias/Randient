@@ -28,6 +28,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="dGW-5c-XJX"/>
                                     <constraint firstAttribute="height" constant="56" id="mRh-df-9xb"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Randomize"/>
                                 <connections>
                                     <action selector="randomizeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DF9-kZ-sTe"/>
