@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GradientViewController.swift
 //  Example
 //
 //  Created by Merrick Sapsford on 09/09/2018.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GradientViewController: UIViewController {
 
+//    @IBOutlet private weak var 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
