@@ -28,14 +28,20 @@ import UIKit
     
     // MARK: Randomization
     
-    open func randomize(animated: Bool) {
+    open func randomize(animated: Bool,
+                        completion: (() -> Void)? = nil) {
         update(for: Randient.randomize(),
-               animated: animated)
+               animated: animated,
+               completion: completion)
     }
     
     // MARK: Updating
     
-    private func update(for gradient: UIGradient, animated: Bool) {
-        setColors(gradient.colors, animated: animated)
+    private func update(for gradient: UIGradient,
+                        animated: Bool,
+                        completion: (() -> Void)?) {
+        setColors(gradient.colors,
+                  animated: animated,
+                  completion: completion)
     }
 }

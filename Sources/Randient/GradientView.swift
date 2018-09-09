@@ -76,18 +76,32 @@ import UIKit
     
     // MARK: Customization
     
-    func setColors(_ colors: [UIColor], animated: Bool, duration: Double = 0.3) {
-        let fromColors = self.colors
+    func setColors(_ colors: [UIColor],
+                   animated: Bool,
+                   duration: Double = 1.0,
+                   completion: (() -> Void)?) {
+        let fromColors = gradientLayer?.colors
+        self.colors = colors
         if animated {
+            
+            CATransaction.begin()
+            
             let animation = CABasicAnimation(keyPath: "colors")
             animation.fromValue = fromColors
-            animation.toValue = colors
+            animation.toValue = gradientLayer?.colors
             animation.duration = duration
             animation.isRemovedOnCompletion = true
             animation.fillMode = .forwards
             animation.timingFunction = CAMediaTimingFunction(name: .linear)
+            
+            CATransaction.setCompletionBlock {
+                completion?()
+            }
+            
             gradientLayer?.add(animation, forKey: "colors")
+            CATransaction.commit()
+        } else {
+            completion?()
         }
-        self.colors = colors
     }
 }
