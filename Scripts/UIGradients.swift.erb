@@ -5,7 +5,7 @@ public struct UIGradient {
     let colors: [UIColor]
 }
 
-public enum UIGradients {
+public enum UIGradients: CaseIterable {
     <% @colors.each do |color| %>case <%=color["camelized_name"]%>
     <% end -%>
 }
