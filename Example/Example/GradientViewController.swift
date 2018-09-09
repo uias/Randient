@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Randient
 
 class GradientViewController: UIViewController {
 
-//    @IBOutlet private weak var 
+    @IBOutlet private weak var randientView: RandientView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,5 +24,10 @@ class GradientViewController: UIViewController {
     }
 
 
+    // MARK: Actions
+    
+    @IBAction private func randomizeButtonPressed(_ sender: UIButton) {
+        randientView.randomize(animated: true)
+    }
 }
 

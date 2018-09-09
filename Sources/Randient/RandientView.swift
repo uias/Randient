@@ -12,36 +12,30 @@ import UIKit
     
     // MARK: Properties
     
-    open var gradient: UIGradient! {
-        didSet {
-            update(for: gradient)
-        }
-    }
+    open private(set) var gradient: UIGradient!
     
     // MARK: Init
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        randomize()
+        randomize(animated: false)
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        randomize()
+        randomize(animated: false)
     }
     
     // MARK: Randomization
     
-    open func randomize() {
-        let allGradients = UIGradients.allCases
-        let index = Int.random(in: 0 ..< allGradients.count)
-        
-        self.gradient = allGradients[index].gradient
+    open func randomize(animated: Bool) {
+        update(for: Randient.randomize(),
+               animated: animated)
     }
     
     // MARK: Updating
     
-    private func update(for gradient: UIGradient) {
-        self.colors = gradient.colors
+    private func update(for gradient: UIGradient, animated: Bool) {
+        setColors(gradient.colors, animated: animated)
     }
 }

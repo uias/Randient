@@ -14,6 +14,7 @@
 		4639DD6E21451D180038E5A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4639DD6C21451D180038E5A6 /* LaunchScreen.storyboard */; };
 		4639DD7621451D490038E5A6 /* Randient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4639DD7521451D490038E5A6 /* Randient.framework */; };
 		4639DD7721451D490038E5A6 /* Randient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4639DD7521451D490038E5A6 /* Randient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		464BE4DF21454D65009B2A0D /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464BE4DE21454D65009B2A0D /* ActionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		4639DD6D21451D180038E5A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4639DD6F21451D180038E5A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4639DD7521451D490038E5A6 /* Randient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Randient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		464BE4DE21454D65009B2A0D /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,11 +78,36 @@
 				4639DD6321451D180038E5A6 /* AppDelegate.swift */,
 				4639DD6521451D180038E5A6 /* GradientViewController.swift */,
 				4639DD6721451D180038E5A6 /* Main.storyboard */,
+				464BE4DC21454D47009B2A0D /* Example Extras */,
+				464BE4DB21454D24009B2A0D /* Resources */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		464BE4DB21454D24009B2A0D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				4639DD6A21451D180038E5A6 /* Assets.xcassets */,
 				4639DD6C21451D180038E5A6 /* LaunchScreen.storyboard */,
 				4639DD6F21451D180038E5A6 /* Info.plist */,
 			);
-			path = Example;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		464BE4DC21454D47009B2A0D /* Example Extras */ = {
+			isa = PBXGroup;
+			children = (
+				464BE4DD21454D52009B2A0D /* Components */,
+			);
+			name = "Example Extras";
+			sourceTree = "<group>";
+		};
+		464BE4DD21454D52009B2A0D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				464BE4DE21454D65009B2A0D /* ActionButton.swift */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4639DD6621451D180038E5A6 /* GradientViewController.swift in Sources */,
+				464BE4DF21454D65009B2A0D /* ActionButton.swift in Sources */,
 				4639DD6421451D180038E5A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

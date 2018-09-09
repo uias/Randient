@@ -10,6 +10,7 @@
 		4639DD5121451CFA0038E5A6 /* Randient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4639DD4F21451CFA0038E5A6 /* Randient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		464BE4D621454811009B2A0D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464BE4D521454811009B2A0D /* GradientView.swift */; };
 		464BE4DA21454B8B009B2A0D /* RandientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464BE4D921454B8B009B2A0D /* RandientView.swift */; };
+		464BE4E321455020009B2A0D /* Randient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464BE4E221455020009B2A0D /* Randient.swift */; };
 		46FB496F21454613005363F7 /* UIGradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FB496E21454613005363F7 /* UIGradients.swift */; };
 /* End PBXBuildFile section */
 
@@ -19,6 +20,7 @@
 		4639DD5021451CFA0038E5A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		464BE4D521454811009B2A0D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		464BE4D921454B8B009B2A0D /* RandientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandientView.swift; sourceTree = "<group>"; };
+		464BE4E221455020009B2A0D /* Randient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Randient.swift; sourceTree = "<group>"; };
 		46FB496E21454613005363F7 /* UIGradients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGradients.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				4639DD4F21451CFA0038E5A6 /* Randient.h */,
+				464BE4E221455020009B2A0D /* Randient.swift */,
 				464BE4D921454B8B009B2A0D /* RandientView.swift */,
 				464BE4D521454811009B2A0D /* GradientView.swift */,
 				46FB496D21454613005363F7 /* gen */,
@@ -170,6 +173,7 @@
 				464BE4DA21454B8B009B2A0D /* RandientView.swift in Sources */,
 				464BE4D621454811009B2A0D /* GradientView.swift in Sources */,
 				46FB496F21454613005363F7 /* UIGradients.swift in Sources */,
+				464BE4E321455020009B2A0D /* Randient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
