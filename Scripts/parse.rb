@@ -1,8 +1,9 @@
 # @example
 # curl https://raw.githubusercontent.com/Ghosh/uiGradients/master/gradients.json | ruby parse.rb
 
-require "json"
-require "erb"
+require 'json'
+require 'erb'
+require 'fileutils'
 require 'active_support/core_ext/string/inflections'
 
 def parse(body)
@@ -16,11 +17,13 @@ def parse(body)
 end
 
 def render_swift
-  ERB.new(File.read("UIGradients.swift.erb"), nil, '-').result()
+  ERB.new(File.read(File.dirname(__FILE__) + "/UIGradients.swift.erb"), nil, '-').result()
 end
 
 def write
-  File.open("UIGradients.swift", "w") do |f|
+  gendir = File.dirname(__FILE__) + '/gen'
+  FileUtils.mkdir_p gendir
+  File.open(gendir + "/UIGradients.swift", "w") do |f|
     f.write render_swift
   end
 end

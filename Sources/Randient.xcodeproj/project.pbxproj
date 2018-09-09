@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		4639DD5121451CFA0038E5A6 /* Randient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4639DD4F21451CFA0038E5A6 /* Randient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46FB496F21454613005363F7 /* UIGradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FB496E21454613005363F7 /* UIGradients.swift */; };
+		46FB497121454628005363F7 /* Randient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FB497021454628005363F7 /* Randient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4639DD4C21451CFA0038E5A6 /* Randient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Randient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4639DD4F21451CFA0038E5A6 /* Randient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Randient.h; sourceTree = "<group>"; };
 		4639DD5021451CFA0038E5A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46FB496E21454613005363F7 /* UIGradients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGradients.swift; sourceTree = "<group>"; };
+		46FB497021454628005363F7 /* Randient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Randient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,9 +51,20 @@
 			isa = PBXGroup;
 			children = (
 				4639DD4F21451CFA0038E5A6 /* Randient.h */,
+				46FB497021454628005363F7 /* Randient.swift */,
+				46FB496D21454613005363F7 /* gen */,
 				4639DD5021451CFA0038E5A6 /* Info.plist */,
 			);
 			path = Randient;
+			sourceTree = "<group>";
+		};
+		46FB496D21454613005363F7 /* gen */ = {
+			isa = PBXGroup;
+			children = (
+				46FB496E21454613005363F7 /* UIGradients.swift */,
+			);
+			name = gen;
+			path = ../../Scripts/gen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,6 +85,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4639DD5421451CFA0038E5A6 /* Build configuration list for PBXNativeTarget "Randient" */;
 			buildPhases = (
+				46FB496A21453142005363F7 /* Load Latest Gradients */,
 				4639DD4721451CFA0038E5A6 /* Sources */,
 				4639DD4821451CFA0038E5A6 /* Frameworks */,
 				4639DD4921451CFA0038E5A6 /* Headers */,
@@ -95,6 +111,7 @@
 				TargetAttributes = {
 					4639DD4B21451CFA0038E5A6 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -125,11 +142,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		46FB496A21453142005363F7 /* Load Latest Gradients */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Load Latest Gradients";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SCRIPTS_DIR=\"$PROJECT_DIR/../Scripts\"\n\n$SCRIPTS_DIR/update.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4639DD4721451CFA0038E5A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46FB497121454628005363F7 /* Randient.swift in Sources */,
+				46FB496F21454613005363F7 /* UIGradients.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +224,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -245,7 +281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -259,6 +295,7 @@
 		4639DD5521451CFA0038E5A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -275,6 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.uias.Randient;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,6 +321,7 @@
 		4639DD5621451CFA0038E5A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
