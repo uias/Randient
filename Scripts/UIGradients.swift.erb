@@ -1,0 +1,37 @@
+import UIKit
+
+public struct UIGradient {
+    let name: String
+    let colors: [UIColor]
+}
+
+public enum UIGradients {
+    <% @colors.each do |color| %>case <%=color["camelized_name"]%>
+    <% end -%>
+}
+
+public extension UIGradients {
+
+    var gradient: UIGradient {
+        switch self {
+            <% @colors.each do |color| %>case .<%=color["camelized_name"]%>:
+                return UIGradient(name: "<%=color["name"]%>", 
+                                  colors: [<% color["colors"].each do |hexString| %>ColorParser.parse(hexRGB: "<%=hexString %>"), <% end %>])
+            <% end %>
+        }
+    }
+}
+
+private class ColorParser {
+    
+    class func parse(hexRGB: String) -> UIColor {
+        return parse(hexRGBA: hexRGB + "ff")
+    }
+    
+    class func parse(hexRGBA: String) -> UIColor {
+        guard let val = Int(hexRGBA.replacingOccurrences(of: "#", with: ""), radix: 16) else {
+            fatalError("Failed to parse Color")
+        }
+        return UIColor.init(red: CGFloat((val >> 24) & 0xff) / 255.0, green: CGFloat((val >> 16) & 0xff) / 255.0, blue: CGFloat((val >> 8) & 0xff) / 255.0, alpha: CGFloat(val & 0xff) / 255.0)
+    }
+}
