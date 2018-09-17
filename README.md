@@ -1,2 +1,3 @@
-# Randient
-Radient, random gradient views for iOS inspired by uigradients.com
+<p align="center">
+    <img src=".artwork/logo.png" width="890" alt="Tabman"/>
+</p>
