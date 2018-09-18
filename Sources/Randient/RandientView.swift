@@ -43,6 +43,7 @@ open class RandientView: GradientView {
     private func update(for gradient: UIGradient,
                         animated: Bool,
                         completion: (() -> Void)?) {
+        self.gradient = gradient
         setColors(gradient.colors,
                   animated: animated,
                   completion: completion)

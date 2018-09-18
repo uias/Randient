@@ -14,6 +14,14 @@ class GradientViewController: UIViewController {
     @IBOutlet private weak var randientView: RandientView!
     @IBOutlet private weak var gradientNameLabel: UILabel!
     
+    // MARK: Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        gradientNameLabel.text = randientView.gradient.name
+    }
+    
     // MARK: Actions
     
     @IBAction private func randomizeButtonPressed(_ sender: UIButton) {

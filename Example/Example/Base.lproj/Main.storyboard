@@ -25,16 +25,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="131.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VHL-5q-lTh">
-                                                <rect key="frame" x="0.0" y="36" width="375" height="63.5"/>
+                                                <rect key="frame" x="16" y="36" width="343" height="63.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT GRADIENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykw-RT-y6G">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gradient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZC-2u-18v">
-                                                        <rect key="frame" x="0.0" y="25" width="375" height="38.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gradient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JZC-2u-18v">
+                                                        <rect key="frame" x="0.0" y="25" width="343" height="38.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -44,9 +44,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="VHL-5q-lTh" firstAttribute="leading" secondItem="k2S-bd-2cn" secondAttribute="leading" id="2e8-1v-grg"/>
+                                            <constraint firstItem="VHL-5q-lTh" firstAttribute="leading" secondItem="k2S-bd-2cn" secondAttribute="leading" constant="16" id="2e8-1v-grg"/>
                                             <constraint firstAttribute="bottom" secondItem="VHL-5q-lTh" secondAttribute="bottom" constant="32" id="810-GL-1yy"/>
-                                            <constraint firstAttribute="trailing" secondItem="VHL-5q-lTh" secondAttribute="trailing" id="M4V-gW-94T"/>
+                                            <constraint firstAttribute="trailing" secondItem="VHL-5q-lTh" secondAttribute="trailing" constant="16" id="M4V-gW-94T"/>
                                         </constraints>
                                     </view>
                                 </subviews>
