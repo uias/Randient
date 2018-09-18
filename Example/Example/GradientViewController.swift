@@ -12,11 +12,13 @@ import Randient
 class GradientViewController: UIViewController {
 
     @IBOutlet private weak var randientView: RandientView!
+    @IBOutlet private weak var gradientNameLabel: UILabel!
     
     // MARK: Actions
     
     @IBAction private func randomizeButtonPressed(_ sender: UIButton) {
-        randientView.randomize(animated: true)
+        let gradient = randientView.randomize(animated: true)
+        gradientNameLabel.text = gradient.name
     }
 }
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable open class GradientView: UIView {
+open class GradientView: UIView {
     
     // MARK: Properties
     

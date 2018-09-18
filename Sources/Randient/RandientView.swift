@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable open class RandientView: GradientView {
+open class RandientView: GradientView {
     
     // MARK: Properties
     
@@ -28,11 +28,14 @@ import UIKit
     
     // MARK: Randomization
     
+    @discardableResult
     open func randomize(animated: Bool,
-                        completion: (() -> Void)? = nil) {
-        update(for: Randient.randomize(),
+                        completion: (() -> Void)? = nil) -> UIGradient {
+        let gradient = Randient.randomize()
+        update(for: gradient,
                animated: animated,
                completion: completion)
+        return gradient
     }
     
     // MARK: Updating
