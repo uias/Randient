@@ -80,8 +80,12 @@ open class GradientView: UIView {
                    animated: Bool,
                    duration: Double = 1.0,
                    completion: (() -> Void)?) {
+        
+        // Equalize colors
+        self.colors = equalize(colors: self.colors, with: colors)
         let fromColors = gradientLayer?.colors
-        self.colors = colors
+        self.colors = equalize(colors: colors, with: self.colors)
+        
         if animated {
             
             CATransaction.begin()
@@ -103,5 +107,39 @@ open class GradientView: UIView {
         } else {
             completion?()
         }
+    }
+}
+
+private extension GradientView {
+    
+    /// Ensures an array of colors is equalized with another array.
+    ///
+    /// Uses color interpolation to insert any missing values.
+    ///
+    /// - Parameters:
+    ///   - colors: Colors to equalize.
+    ///   - others: Colors to compare against.
+    /// - Returns: Equalized colors.
+    func equalize(colors: [UIColor]?, with others: [UIColor]?) -> [UIColor]? {
+        guard let colors = colors, let others = others,
+            let first = colors.first, let last = colors.last else {
+            return nil
+        }
+        let delta = others.count - colors.count
+        guard delta > 0 else {
+            return colors
+        }
+        
+        let interpolationPoint = 1.0 / CGFloat(delta + 1)
+        var newColors = [first]
+        for point in 1 ... delta {
+            let percent = CGFloat(point) * interpolationPoint
+            if let color = first.interpolate(between: last, percent: percent) {
+                newColors.append(color)
+            }
+        }
+        newColors.append(last)
+        
+        return newColors
     }
 }
