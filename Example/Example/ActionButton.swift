@@ -13,24 +13,37 @@ class ActionButton: UIButton {
     // MARK: Defaults
     
     private struct Defaults {
-        static let backgroundColor = UIColor.white.withAlphaComponent(0.2)
-        static let highlightedBackgroundColor = UIColor.white.withAlphaComponent(0.5)
+        static let backgroundColor = UIColor.white.withAlphaComponent(0.4)
+        static let highlightedBackgroundColor = UIColor.white.withAlphaComponent(0.7)
     }
     
     override var isHighlighted: Bool {
         didSet {
-            UIView.animate(withDuration: 0.2) {
-                self.backgroundColor = self.isHighlighted ? Defaults.highlightedBackgroundColor : Defaults.backgroundColor
-            }
+//            UIView.animate(withDuration: 0.2) {
+//                self.backgroundColor = self.isHighlighted ? Defaults.highlightedBackgroundColor : Defaults.backgroundColor
+//            }
         }
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        layer.borderColor = UIColor.white.cgColor
-        layer.borderWidth = 1.0
         layer.cornerRadius = 16.0
         backgroundColor = Defaults.backgroundColor
+    }
+}
+
+extension ActionButton: Themeable {
+    
+    func applyTheme(_ theme: Theme) {
+        
+        switch theme {
+        case .light:
+            backgroundColor = UIColor.white.withAlphaComponent(0.4)
+            setTitleColor(.black, for: .normal)
+        case .dark:
+            backgroundColor = UIColor.black.withAlphaComponent(0.4)
+            setTitleColor(.white, for: .normal)
+        }
     }
 }

@@ -21,7 +21,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4uv-PM-1Xc" customClass="RandientView" customModule="Randient">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2S-bd-2cn" customClass="RoundedHeaderView" customModule="Example" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2S-bd-2cn" customClass="GradientInfoHeaderView" customModule="Example" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="131.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VHL-5q-lTh">
@@ -48,6 +48,9 @@
                                             <constraint firstAttribute="bottom" secondItem="VHL-5q-lTh" secondAttribute="bottom" constant="32" id="810-GL-1yy"/>
                                             <constraint firstAttribute="trailing" secondItem="VHL-5q-lTh" secondAttribute="trailing" constant="16" id="M4V-gW-94T"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="JZC-2u-18v" id="WKB-2Y-NbP"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -84,7 +87,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="gradientNameLabel" destination="JZC-2u-18v" id="aM2-5M-lB5"/>
+                        <outlet property="headerView" destination="k2S-bd-2cn" id="aKN-fJ-lOo"/>
                         <outlet property="randientView" destination="4uv-PM-1Xc" id="Yud-Cr-1WH"/>
                     </connections>
                 </viewController>

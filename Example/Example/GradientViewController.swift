@@ -9,24 +9,56 @@
 import UIKit
 import Randient
 
-class GradientViewController: UIViewController {
+class GradientViewController: UIViewController, Themeable {
 
     @IBOutlet private weak var randientView: RandientView!
-    @IBOutlet private weak var gradientNameLabel: UILabel!
+    @IBOutlet private weak var headerView: GradientInfoHeaderView!
+    
+    private var currentTheme: Theme?
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        if currentTheme == .dark {
+            return .lightContent
+        }
+        return .default
+    }
     
     // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        gradientNameLabel.text = randientView.gradient.name
+        let gradient: UIGradient = randientView.gradient
+        headerView.nameLabel.text = gradient.name
+        applyTheme(for: gradient, animated: false)
     }
     
     // MARK: Actions
     
     @IBAction private func randomizeButtonPressed(_ sender: UIButton) {
         let gradient = randientView.randomize(animated: true)
-        gradientNameLabel.text = gradient.name
+        headerView.nameLabel.text = gradient.name
+        applyTheme(for: gradient, animated: true)
+    }
+}
+
+private extension GradientViewController {
+    
+    func applyTheme(for gradient: UIGradient, animated: Bool) {
+        let theme: Theme = gradient.isLight ? .light : .dark
+        guard theme != self.currentTheme else {
+            return
+        }
+        self.currentTheme = theme
+        applyTheme(theme, animated: animated)
+        
+        if animated {
+            UIView.animate(withDuration: 1.0) {
+                self.setNeedsStatusBarAppearanceUpdate()
+            }
+        } else {
+            setNeedsStatusBarAppearanceUpdate()
+        }
     }
 }
 

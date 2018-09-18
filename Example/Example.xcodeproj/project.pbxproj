@@ -15,7 +15,8 @@
 		4639DD7621451D490038E5A6 /* Randient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4639DD7521451D490038E5A6 /* Randient.framework */; };
 		4639DD7721451D490038E5A6 /* Randient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4639DD7521451D490038E5A6 /* Randient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		464BE4DF21454D65009B2A0D /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464BE4DE21454D65009B2A0D /* ActionButton.swift */; };
-		46DBB9D221516E640094B965 /* RoundedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBB9D121516E640094B965 /* RoundedHeaderView.swift */; };
+		46DBB9D221516E640094B965 /* GradientInfoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBB9D121516E640094B965 /* GradientInfoHeaderView.swift */; };
+		46DBB9E02151907A0094B965 /* Themeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBB9DF2151907A0094B965 /* Themeable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,7 +43,8 @@
 		4639DD6F21451D180038E5A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4639DD7521451D490038E5A6 /* Randient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Randient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		464BE4DE21454D65009B2A0D /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
-		46DBB9D121516E640094B965 /* RoundedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedHeaderView.swift; sourceTree = "<group>"; };
+		46DBB9D121516E640094B965 /* GradientInfoHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientInfoHeaderView.swift; sourceTree = "<group>"; };
+		46DBB9DF2151907A0094B965 /* Themeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themeable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				464BE4DE21454D65009B2A0D /* ActionButton.swift */,
-				46DBB9D121516E640094B965 /* RoundedHeaderView.swift */,
+				46DBB9D121516E640094B965 /* GradientInfoHeaderView.swift */,
+				46DBB9DF2151907A0094B965 /* Themeable.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -187,8 +190,9 @@
 			files = (
 				4639DD6621451D180038E5A6 /* GradientViewController.swift in Sources */,
 				464BE4DF21454D65009B2A0D /* ActionButton.swift in Sources */,
+				46DBB9E02151907A0094B965 /* Themeable.swift in Sources */,
 				4639DD6421451D180038E5A6 /* AppDelegate.swift in Sources */,
-				46DBB9D221516E640094B965 /* RoundedHeaderView.swift in Sources */,
+				46DBB9D221516E640094B965 /* GradientInfoHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

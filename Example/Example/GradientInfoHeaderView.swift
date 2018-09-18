@@ -1,5 +1,5 @@
 //
-//  RoundedHeaderView.swift
+//  GradientInfoHeaderView.swift
 //  Example
 //
 //  Created by Merrick Sapsford on 18/09/2018.
@@ -8,9 +8,10 @@
 
 import UIKit
 
-@IBDesignable class RoundedHeaderView: UIView {
+@IBDesignable class GradientInfoHeaderView: UIView {
     
     private let maskLayer = CAShapeLayer()
+    @IBOutlet private(set) weak var nameLabel: UILabel!
     
     // MARK: Init
     
@@ -37,5 +38,19 @@ import UIKit
         maskLayer.path = UIBezierPath(roundedRect: self.bounds,
                                       byRoundingCorners: [.bottomLeft, .bottomRight],
                                       cornerRadii: CGSize(width: 32, height: 32)).cgPath
+    }
+}
+
+extension GradientInfoHeaderView: Themeable {
+    
+    func applyTheme(_ theme: Theme) {
+        switch theme {
+        case .light:
+            backgroundColor = UIColor.white.withAlphaComponent(0.8)
+            nameLabel.textColor = .black
+        case .dark:
+            backgroundColor = UIColor.black.withAlphaComponent(0.8)
+            nameLabel.textColor = .white
+        }
     }
 }
