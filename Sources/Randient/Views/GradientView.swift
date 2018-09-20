@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// View which displays a gradient layer in its bounds.
 open class GradientView: UIView {
     
     // MARK: Properties
@@ -21,7 +22,8 @@ open class GradientView: UIView {
         }
     }
     
-    open var colors: [UIColor]? = nil {
+    /// The colors that are currently active in the gradient. Animatable.
+    open private(set) var colors: [UIColor]? = nil {
         didSet {
             var colorRefs = [CGColor]()
             for color in colors ?? [] {
@@ -31,6 +33,7 @@ open class GradientView: UIView {
         }
     }
     
+    /// Locations of each gradient stop. Animatable.
     open var locations: [Double]? = nil {
         didSet {
             var locationNumbers = [NSNumber]()
@@ -41,11 +44,13 @@ open class GradientView: UIView {
         }
     }
     
+    /// The start point of the gradient in the layers coordinate space. Animiatable.
     open var startPoint: CGPoint = CGPoint(x: 0.5, y: 0.0) {
         didSet {
             gradientLayer?.startPoint = startPoint
         }
     }
+    /// The end point of the gradient in the layers coordinate space. Animiatable.
     open var endPoint: CGPoint = CGPoint(x: 0.5, y: 1.0) {
         didSet {
             gradientLayer?.endPoint = endPoint
@@ -76,10 +81,17 @@ open class GradientView: UIView {
     
     // MARK: Customization
     
-    func setColors(_ colors: [UIColor],
-                   animated: Bool,
-                   duration: Double = 1.0,
-                   completion: (() -> Void)?) {
+    /// Update the colors of the gradient.
+    ///
+    /// - Parameters:
+    ///   - colors: New colors.
+    ///   - animated: Whether to animate the update.
+    ///   - duration: Duration of the animation.
+    ///   - completion: Completion handler.
+    internal func setColors(_ colors: [UIColor],
+                            animated: Bool,
+                            duration: TimeInterval = 1.0,
+                            completion: (() -> Void)?) {
         
         // Equalize colors
         self.colors = equalize(colors: self.colors, with: colors)

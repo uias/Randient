@@ -10,6 +10,7 @@ import UIKit
 
 public extension UIGradient {
     
+    /// Whether the gradients color space is primarily 'light' colors.
     public var isLight: Bool {
         let results = colors.map({ $0.isLight })
         let counts = results.reduce(into: [:]) { $0[$1, default: 0] += 1 }

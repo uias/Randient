@@ -8,10 +8,12 @@
 
 import UIKit
 
+/// Gradient View that provides the ability to display random `UIGradient` gradients.
 open class RandientView: GradientView {
     
     // MARK: Properties
     
+    /// The currently visible gradient.
     open private(set) var gradient: UIGradient!
     
     // MARK: Init
@@ -28,6 +30,12 @@ open class RandientView: GradientView {
     
     // MARK: Randomization
     
+    /// Display a new randomly selected gradient.
+    ///
+    /// - Parameters:
+    ///   - animated: Whether to animate the update.
+    ///   - completion: Completion handler.
+    /// - Returns: The new gradient.
     @discardableResult
     open func randomize(animated: Bool,
                         completion: (() -> Void)? = nil) -> UIGradient {

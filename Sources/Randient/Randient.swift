@@ -10,10 +10,20 @@ import Foundation
 
 public class Randient {
     
+    private static var lastGradient: UIGradient?
+    
+    /// Randomly select a new gradient from `UIGradients`.
+    ///
+    /// - Returns: Randomly selected gradient.
     public class func randomize() -> UIGradient {
         let allGradients = UIGradients.allCases
         let index = Int.random(in: 0 ..< allGradients.count)
         
-        return allGradients[index].gradient
+        let candidate = allGradients[index].gradient
+        if candidate.colors != lastGradient?.colors {
+            return candidate
+        } else {
+            return randomize()
+        }
     }
 }
