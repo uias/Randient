@@ -23,6 +23,10 @@
 
 **Randient** provides randomized radient [uiGradients](https://uigradients.com) for iOS.
 
+<p align="center">
+    <img src=".artwork/randient.gif" width="450" alt="Tabman"/>
+</p>
+
 ## ⭐️ Features
 
 - [x] Automatically generated gradients from [uiGradients](https://uigradients.com) in Swift.
