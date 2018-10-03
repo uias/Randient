@@ -14,12 +14,12 @@ public extension UIGradient {
     public struct Metadata {
         
         /// Whether the gradients color space is primarily 'light' colors.
-        public let isLight: Bool
+        public let isPredominantlyLight: Bool
     }
     
     /// Metadata about the gradient.
     var metadata: Metadata {
-        return Metadata(isLight: self.isLight)
+        return Metadata(isPredominantlyLight: self.isLight)
     }
 }
 

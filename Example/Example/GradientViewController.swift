@@ -45,7 +45,7 @@ class GradientViewController: UIViewController, Themeable {
 private extension GradientViewController {
     
     func applyTheme(for gradient: UIGradient, animated: Bool) {
-        let theme: Theme = gradient.metadata.isLight ? .light : .dark
+        let theme: Theme = gradient.metadata.isPredominantlyLight ? .light : .dark
         guard theme != self.currentTheme else {
             return
         }
