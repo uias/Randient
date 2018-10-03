@@ -17,13 +17,13 @@ def parse(body)
 end
 
 def render_swift
-  ERB.new(File.read(File.dirname(__FILE__) + "/UIGradients.swift.erb"), nil, '-').result()
+  ERB.new(File.read(File.dirname(__FILE__) + "/UIGradient.swift.erb"), nil, '-').result()
 end
 
 def write
   gendir = File.dirname(__FILE__) + '/gen'
   FileUtils.mkdir_p gendir
-  File.open(gendir + "/UIGradients.swift", "w") do |f|
+  File.open(gendir + "/UIGradient.swift", "w") do |f|
     f.write render_swift
   end
 end
