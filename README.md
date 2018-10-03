@@ -67,17 +67,33 @@ Updating to a new gradient is as simple as...
 randientView.randomize(animated: true)
 ```
 
-### The gradients
+### Using the gradients
 
 An enum of all the gradients from [uiGradients](https://uigradients.com) is generated every time that Randient is built.
 
-These are available in `UIGradients`, and each provide a `UIGradient`:
+These are available in `UIGradient`, and can be used as follows.
 
+```swift
+let gradient = UIGradient.royalBlue
+let colors = gradient.data.colors
 ```
-let gradient = UIGradients.royalBlue.gradient
 
+Each `UIGradient` has associated `UIGradientData` which can be accessed via `.data`.
+
+```swift
+struct UIGradientData {
+    public let name: String
+    public let colors: [UIColor]
+}
 ```
 
+Metadata is also attached to each `UIGradientData`, accessible via `.metadata`.
+
+```swift
+struct Metadata {
+    public let isLight: Bool
+}
+```
 
 ### Gradient View extras
 
@@ -88,3 +104,12 @@ let gradient = UIGradients.royalBlue.gradient
 - `.locations: [Double]?` - Locations of each gradient stop.
 - `.startPoint: CGPoint` - Start point of the gradient (Defaults to `0.5, 0.0`).
 - `.endPoint: CGPoint` - End point of the gradient (Defaults to `0.5, 1.0`).
+
+## 👨🏻‍💻 About
+- Created by [Merrick Sapsford](https://github.com/msaps) ([@MerrickSapsford](https://twitter.com/MerrickSapsford))
+
+## ❤️ Contributing
+Bug reports and pull requests are welcome on GitHub at [https://github.com/uias/Randient](https://github.com/uias/Randient).
+
+## 👮🏻‍♂️ License
+The library is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
