@@ -91,7 +91,7 @@ Metadata is also attached to each `UIGradientData`, accessible via `.metadata`.
 
 ```swift
 struct Metadata {
-    public let isLight: Bool
+    public let isPredominantlyLight: Bool
 }
 ```
 
