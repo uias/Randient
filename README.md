@@ -21,8 +21,6 @@
     </a>
 </p>
 
-**Randient** provides randomized radient [uiGradients](https://uigradients.com) for iOS.
-
 <p align="center">
     <img src=".artwork/randient.gif" width="450" alt="Tabman"/>
 </p>
