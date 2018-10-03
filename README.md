@@ -80,16 +80,24 @@ let gradient = UIGradient.royalBlue
 let colors = gradient.data.colors
 ```
 
-Each `UIGradient` has associated `UIGradientData` which can be accessed via `.data`.
+If you're feeling lucky, a randomized `UIGradient` can also be retrieved.
 
 ```swift
-struct UIGradientData {
+let randomGradient = Randient.randomize()
+```
+
+#### The raw stuff
+
+Each `UIGradient` has associated `Data` which can be accessed via `.data`.
+
+```swift
+struct Data {
     public let name: String
     public let colors: [UIColor]
 }
 ```
 
-Metadata is also attached to each `UIGradientData`, accessible via `.metadata`.
+`Metadata` is also available, accessible via `.metadata`.
 
 ```swift
 struct Metadata {

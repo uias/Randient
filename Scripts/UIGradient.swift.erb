@@ -1,8 +1,11 @@
 import UIKit
 
-public struct UIGradientData {
-    public let name: String
-    public let colors: [UIColor]
+public extension UIGradient {
+
+    public struct Data {
+        public let name: String
+        public let colors: [UIColor]
+    }
 }
 
 public enum UIGradient: CaseIterable {
@@ -12,11 +15,11 @@ public enum UIGradient: CaseIterable {
 
 public extension UIGradient {
 
-    var data: UIGradientData {
+    var data: Data {
         switch self {
             <% @colors.each do |color| %>case .<%=color["camelized_name"]%>:
-                return UIGradientData(name: "<%=color["name"]%>", 
-                                      colors: [<% color["colors"].each do |hexString| %>ColorParser.parse(hexRGB: "<%=hexString %>"), <% end %>])
+                return Data(name: "<%=color["name"]%>", 
+                            colors: [<% color["colors"].each do |hexString| %>ColorParser.parse(hexRGB: "<%=hexString %>"), <% end %>])
             <% end %>
         }
     }
