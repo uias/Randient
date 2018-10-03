@@ -16,11 +16,11 @@ public class Randient {
     ///
     /// - Returns: Randomly selected gradient.
     public class func randomize() -> UIGradient {
-        let allGradients = UIGradients.allCases
+        let allGradients = UIGradient.allCases
         let index = Int.random(in: 0 ..< allGradients.count)
         
-        let candidate = allGradients[index].gradient
-        if candidate.colors != lastGradient?.colors {
+        let candidate = allGradients[index]
+        if candidate.data.colors != lastGradient?.data.colors {
             return candidate
         } else {
             return randomize()

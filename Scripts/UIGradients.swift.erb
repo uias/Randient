@@ -1,22 +1,22 @@
 import UIKit
 
-public struct UIGradient {
+public struct UIGradientData {
     public let name: String
     public let colors: [UIColor]
 }
 
-public enum UIGradients: CaseIterable {
+public enum UIGradient: CaseIterable {
     <% @colors.each do |color| %>case <%=color["camelized_name"]%>
     <% end -%>
 }
 
-public extension UIGradients {
+public extension UIGradient {
 
-    var gradient: UIGradient {
+    var data: UIGradientData {
         switch self {
             <% @colors.each do |color| %>case .<%=color["camelized_name"]%>:
-                return UIGradient(name: "<%=color["name"]%>", 
-                                  colors: [<% color["colors"].each do |hexString| %>ColorParser.parse(hexRGB: "<%=hexString %>"), <% end %>])
+                return UIGradientData(name: "<%=color["name"]%>", 
+                                      colors: [<% color["colors"].each do |hexString| %>ColorParser.parse(hexRGB: "<%=hexString %>"), <% end %>])
             <% end %>
         }
     }

@@ -29,7 +29,7 @@ class GradientViewController: UIViewController, Themeable {
         super.viewDidLoad()
         
         let gradient: UIGradient = randientView.gradient
-        headerView.nameLabel.text = gradient.name
+        headerView.nameLabel.text = gradient.data.name
         applyTheme(for: gradient, animated: false)
     }
     
@@ -37,7 +37,7 @@ class GradientViewController: UIViewController, Themeable {
     
     @IBAction private func randomizeButtonPressed(_ sender: UIButton) {
         let gradient = randientView.randomize(animated: true)
-        headerView.nameLabel.text = gradient.name
+        headerView.nameLabel.text = gradient.data.name
         applyTheme(for: gradient, animated: true)
     }
 }
@@ -45,7 +45,7 @@ class GradientViewController: UIViewController, Themeable {
 private extension GradientViewController {
     
     func applyTheme(for gradient: UIGradient, animated: Bool) {
-        let theme: Theme = gradient.isLight ? .light : .dark
+        let theme: Theme = gradient.metadata.isLight ? .light : .dark
         guard theme != self.currentTheme else {
             return
         }

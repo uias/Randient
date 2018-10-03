@@ -52,7 +52,7 @@ open class RandientView: GradientView {
                         animated: Bool,
                         completion: (() -> Void)?) {
         self.gradient = gradient
-        setColors(gradient.colors,
+        setColors(gradient.data.colors,
                   animated: animated,
                   completion: completion)
     }

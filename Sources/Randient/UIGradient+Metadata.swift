@@ -10,9 +10,23 @@ import UIKit
 
 public extension UIGradient {
     
-    /// Whether the gradients color space is primarily 'light' colors.
-    public var isLight: Bool {
-        let results = colors.map({ $0.isLight })
+    /// Gradient Metadata
+    public struct Metadata {
+        
+        /// Whether the gradients color space is primarily 'light' colors.
+        public let isLight: Bool
+    }
+    
+    /// Metadata about the gradient.
+    var metadata: Metadata {
+        return Metadata(isLight: self.isLight)
+    }
+}
+
+private extension UIGradient {
+    
+    var isLight: Bool {
+        let results = data.colors.map({ $0.isLight })
         let counts = results.reduce(into: [:]) { $0[$1, default: 0] += 1 }
         
         if let (value, _) = counts.max(by: { $0.1 < $1.1 }) {
