@@ -29,5 +29,7 @@ def write
 end
 
 json_string = ARGF.read
+puts("Parsing Gradient JSON")
 parse(json_string)
+puts("Rendering Swift file")
 write()

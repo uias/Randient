@@ -250,7 +250,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SCRIPTS_DIR=\"$PROJECT_DIR/../Scripts\"\n\n$SCRIPTS_DIR/update.sh";
+			shellScript = "SCRIPTS_DIR=\"$PROJECT_DIR/../Scripts\"\n\n$SCRIPTS_DIR/update.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
