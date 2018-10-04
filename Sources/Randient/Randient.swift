@@ -21,6 +21,7 @@ public class Randient {
         
         let candidate = allGradients[index]
         if candidate.data.colors != lastGradient?.data.colors {
+            self.lastGradient = candidate
             return candidate
         } else {
             return randomize()
