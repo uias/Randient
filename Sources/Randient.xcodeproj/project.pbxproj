@@ -10,6 +10,8 @@
 		4639DD5121451CFA0038E5A6 /* Randient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4639DD4F21451CFA0038E5A6 /* Randient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		464BE4E321455020009B2A0D /* Randient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464BE4E221455020009B2A0D /* Randient.swift */; };
 		468EE00621652BC500C27982 /* UIGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468EE00521652BC400C27982 /* UIGradient.swift */; };
+		468EE01C2166A5A400C27982 /* RandientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468EE01B2166A5A400C27982 /* RandientTests.swift */; };
+		468EE01E2166A5A400C27982 /* Randient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4639DD4C21451CFA0038E5A6 /* Randient.framework */; };
 		46DBB9CE21516B290094B965 /* UIGradient+Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBB9CD21516B290094B965 /* UIGradient+Metadata.swift */; };
 		46DBB9D8215173D40094B965 /* UIColor+Analysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBB9D4215173D40094B965 /* UIColor+Analysis.swift */; };
 		46DBB9D9215173D40094B965 /* RandientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBB9D6215173D40094B965 /* RandientView.swift */; };
@@ -17,12 +19,25 @@
 		46DBB9DC215173E40094B965 /* UIColor+Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBB9DB215173E40094B965 /* UIColor+Interpolation.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		468EE01F2166A5A400C27982 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4639DD4321451CFA0038E5A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4639DD4B21451CFA0038E5A6;
+			remoteInfo = Randient;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		4639DD4C21451CFA0038E5A6 /* Randient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Randient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4639DD4F21451CFA0038E5A6 /* Randient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Randient.h; sourceTree = "<group>"; };
 		4639DD5021451CFA0038E5A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		464BE4E221455020009B2A0D /* Randient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Randient.swift; sourceTree = "<group>"; };
 		468EE00521652BC400C27982 /* UIGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGradient.swift; sourceTree = "<group>"; };
+		468EE0192166A5A400C27982 /* RandientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		468EE01B2166A5A400C27982 /* RandientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandientTests.swift; sourceTree = "<group>"; };
+		468EE01D2166A5A400C27982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46DBB9CD21516B290094B965 /* UIGradient+Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIGradient+Metadata.swift"; sourceTree = "<group>"; };
 		46DBB9D4215173D40094B965 /* UIColor+Analysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Analysis.swift"; sourceTree = "<group>"; };
 		46DBB9D6215173D40094B965 /* RandientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandientView.swift; sourceTree = "<group>"; };
@@ -38,6 +53,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		468EE0162166A5A400C27982 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				468EE01E2166A5A400C27982 /* Randient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -45,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				4639DD4E21451CFA0038E5A6 /* Randient */,
+				468EE01A2166A5A400C27982 /* RandientTests */,
 				4639DD4D21451CFA0038E5A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				4639DD4C21451CFA0038E5A6 /* Randient.framework */,
+				468EE0192166A5A400C27982 /* RandientTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +94,15 @@
 				4639DD5021451CFA0038E5A6 /* Info.plist */,
 			);
 			path = Randient;
+			sourceTree = "<group>";
+		};
+		468EE01A2166A5A400C27982 /* RandientTests */ = {
+			isa = PBXGroup;
+			children = (
+				468EE01B2166A5A400C27982 /* RandientTests.swift */,
+				468EE01D2166A5A400C27982 /* Info.plist */,
+			);
+			path = RandientTests;
 			sourceTree = "<group>";
 		};
 		46DBB9D3215173D40094B965 /* Extensions */ = {
@@ -131,18 +165,40 @@
 			productReference = 4639DD4C21451CFA0038E5A6 /* Randient.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		468EE0182166A5A400C27982 /* RandientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 468EE0232166A5A400C27982 /* Build configuration list for PBXNativeTarget "RandientTests" */;
+			buildPhases = (
+				468EE0152166A5A400C27982 /* Sources */,
+				468EE0162166A5A400C27982 /* Frameworks */,
+				468EE0172166A5A400C27982 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				468EE0202166A5A400C27982 /* PBXTargetDependency */,
+			);
+			name = RandientTests;
+			productName = RandientTests;
+			productReference = 468EE0192166A5A400C27982 /* RandientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		4639DD4321451CFA0038E5A6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "UI At Six";
 				TargetAttributes = {
 					4639DD4B21451CFA0038E5A6 = {
 						CreatedOnToolsVersion = 9.4;
 						LastSwiftMigration = 0940;
+					};
+					468EE0182166A5A400C27982 = {
+						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
@@ -159,12 +215,20 @@
 			projectRoot = "";
 			targets = (
 				4639DD4B21451CFA0038E5A6 /* Randient */,
+				468EE0182166A5A400C27982 /* RandientTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4639DD4A21451CFA0038E5A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		468EE0172166A5A400C27982 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -205,7 +269,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		468EE0152166A5A400C27982 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				468EE01C2166A5A400C27982 /* RandientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		468EE0202166A5A400C27982 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4639DD4B21451CFA0038E5A6 /* Randient */;
+			targetProxy = 468EE01F2166A5A400C27982 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4639DD5221451CFA0038E5A6 /* Debug */ = {
@@ -379,6 +459,45 @@
 			};
 			name = Release;
 		};
+		468EE0212166A5A400C27982 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RandientTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uias.RandientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		468EE0222166A5A400C27982 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RandientTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uias.RandientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -396,6 +515,15 @@
 			buildConfigurations = (
 				4639DD5521451CFA0038E5A6 /* Debug */,
 				4639DD5621451CFA0038E5A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		468EE0232166A5A400C27982 /* Build configuration list for PBXNativeTarget "RandientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				468EE0212166A5A400C27982 /* Debug */,
+				468EE0222166A5A400C27982 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
