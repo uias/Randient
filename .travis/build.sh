@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [ -n "$TRAVIS_TAG" ]; then
-    fastlane publish
+    bundle exec fastlane publish
 else
-    fastlane test
+    bundle exec fastlane test
 fi
 exit
