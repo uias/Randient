@@ -8,7 +8,7 @@ platform :ios do
   desc "Run unit tests and check library"
   lane :test do
     scan(workspace: "Randient.xcworkspace", scheme: "Randient", clean: true)
-    pod_lib_lint
+    # pod_lib_lint
   end
 
   desc "Publish a new version to CocoaPods and GitHub"
