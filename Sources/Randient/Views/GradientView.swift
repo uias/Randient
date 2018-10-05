@@ -107,8 +107,13 @@ open class GradientView: UIView {
             animation.toValue = gradientLayer?.colors
             animation.duration = duration
             animation.isRemovedOnCompletion = true
-            animation.fillMode = .forwards
-            animation.timingFunction = CAMediaTimingFunction(name: .linear)
+            #if swift(>=4.2)
+                animation.fillMode = .forwards
+                animation.timingFunction = CAMediaTimingFunction(name: .linear)
+            #else
+                animation.fillMode = kCAFillModeForwards
+                animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+            #endif
             
             CATransaction.setCompletionBlock {
                 completion?()
