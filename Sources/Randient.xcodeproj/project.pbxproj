@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4622FF9D216755D400214563 /* UIGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4622FF9C216755D400214563 /* UIGradient.swift */; };
+		4622FFA02167AA3B00214563 /* UIGradientMetadataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4622FF9F2167AA3B00214563 /* UIGradientMetadataTests.swift */; };
 		4639DD5121451CFA0038E5A6 /* Randient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4639DD4F21451CFA0038E5A6 /* Randient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		464BE4E321455020009B2A0D /* Randient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464BE4E221455020009B2A0D /* Randient.swift */; };
 		468EE01C2166A5A400C27982 /* RandientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468EE01B2166A5A400C27982 /* RandientTests.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		4622FF9C216755D400214563 /* UIGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGradient.swift; sourceTree = "<group>"; };
+		4622FF9F2167AA3B00214563 /* UIGradientMetadataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGradientMetadataTests.swift; sourceTree = "<group>"; };
 		4639DD4C21451CFA0038E5A6 /* Randient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Randient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4639DD4F21451CFA0038E5A6 /* Randient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Randient.h; sourceTree = "<group>"; };
 		4639DD5021451CFA0038E5A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				468EE01B2166A5A400C27982 /* RandientTests.swift */,
+				4622FF9F2167AA3B00214563 /* UIGradientMetadataTests.swift */,
 				468EE01D2166A5A400C27982 /* Info.plist */,
 			);
 			path = RandientTests;
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4622FFA02167AA3B00214563 /* UIGradientMetadataTests.swift in Sources */,
 				468EE01C2166A5A400C27982 /* RandientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

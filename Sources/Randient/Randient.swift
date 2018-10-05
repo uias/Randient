@@ -10,6 +10,7 @@ import Foundation
 
 public class Randient {
     
+    /// The last randomized gradient.
     private static var lastGradient: UIGradient?
     
     /// Randomly select a new gradient from `UIGradients`.
@@ -19,12 +20,25 @@ public class Randient {
         let allGradients = UIGradient.allCases
         let index = Int.random(in: 0 ..< allGradients.count)
         
-        let candidate = allGradients[index]
-        if candidate.data.colors != lastGradient?.data.colors {
-            self.lastGradient = candidate
-            return candidate
+        if let newGradient = verifyNewGradient(allGradients[index]) {
+            return newGradient
         } else {
             return randomize()
         }
+    }
+    
+    /// Verify that the new gradient can be used.
+    ///
+    /// Checks that it is not equal to the previously returned gradient.
+    ///
+    /// - Parameter gradient: New gradient.
+    /// - Returns: Gradient if it can be used.
+    internal class func verifyNewGradient(_ gradient: UIGradient) -> UIGradient? {
+        guard gradient.data.colors != lastGradient?.data.colors else {
+            return nil
+        }
+        
+        self.lastGradient = gradient
+        return gradient
     }
 }
