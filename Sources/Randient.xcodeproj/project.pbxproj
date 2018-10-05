@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4622FF9D216755D400214563 /* UIGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4622FF9C216755D400214563 /* UIGradient.swift */; };
 		4639DD5121451CFA0038E5A6 /* Randient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4639DD4F21451CFA0038E5A6 /* Randient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		464BE4E321455020009B2A0D /* Randient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464BE4E221455020009B2A0D /* Randient.swift */; };
-		468EE00621652BC500C27982 /* UIGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468EE00521652BC400C27982 /* UIGradient.swift */; };
 		468EE01C2166A5A400C27982 /* RandientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468EE01B2166A5A400C27982 /* RandientTests.swift */; };
 		468EE01E2166A5A400C27982 /* Randient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4639DD4C21451CFA0038E5A6 /* Randient.framework */; };
 		46DBB9CE21516B290094B965 /* UIGradient+Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBB9CD21516B290094B965 /* UIGradient+Metadata.swift */; };
@@ -30,11 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4622FF9C216755D400214563 /* UIGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGradient.swift; sourceTree = "<group>"; };
 		4639DD4C21451CFA0038E5A6 /* Randient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Randient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4639DD4F21451CFA0038E5A6 /* Randient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Randient.h; sourceTree = "<group>"; };
 		4639DD5021451CFA0038E5A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		464BE4E221455020009B2A0D /* Randient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Randient.swift; sourceTree = "<group>"; };
-		468EE00521652BC400C27982 /* UIGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGradient.swift; sourceTree = "<group>"; };
 		468EE0192166A5A400C27982 /* RandientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		468EE01B2166A5A400C27982 /* RandientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandientTests.swift; sourceTree = "<group>"; };
 		468EE01D2166A5A400C27982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,10 +64,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4622FF9B216755D400214563 /* gen */ = {
+			isa = PBXGroup;
+			children = (
+				4622FF9C216755D400214563 /* UIGradient.swift */,
+			);
+			path = gen;
+			sourceTree = "<group>";
+		};
 		4639DD4221451CFA0038E5A6 = {
 			isa = PBXGroup;
 			children = (
 				4639DD4E21451CFA0038E5A6 /* Randient */,
+				4622FF9B216755D400214563 /* gen */,
 				468EE01A2166A5A400C27982 /* RandientTests */,
 				4639DD4D21451CFA0038E5A6 /* Products */,
 			);
@@ -90,7 +99,6 @@
 				46DBB9CD21516B290094B965 /* UIGradient+Metadata.swift */,
 				46DBB9D5215173D40094B965 /* Views */,
 				46DBB9D3215173D40094B965 /* Extensions */,
-				46FB496D21454613005363F7 /* gen */,
 				4639DD5021451CFA0038E5A6 /* Info.plist */,
 			);
 			path = Randient;
@@ -121,15 +129,6 @@
 				46DBB9D7215173D40094B965 /* GradientView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		46FB496D21454613005363F7 /* gen */ = {
-			isa = PBXGroup;
-			children = (
-				468EE00521652BC400C27982 /* UIGradient.swift */,
-			);
-			name = gen;
-			path = ../../Scripts/gen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +249,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SCRIPTS_DIR=\"$PROJECT_DIR/../Scripts\"\n\n$SCRIPTS_DIR/update.sh\n";
+			shellScript = "SCRIPTS_DIR=\"$PROJECT_DIR/../Scripts\"\n\n$SCRIPTS_DIR/update.sh $SRCROOT\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -259,7 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				468EE00621652BC500C27982 /* UIGradient.swift in Sources */,
+				4622FF9D216755D400214563 /* UIGradient.swift in Sources */,
 				46DBB9DC215173E40094B965 /* UIColor+Interpolation.swift in Sources */,
 				46DBB9CE21516B290094B965 /* UIGradient+Metadata.swift in Sources */,
 				46DBB9D8215173D40094B965 /* UIColor+Analysis.swift in Sources */,
