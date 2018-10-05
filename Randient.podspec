@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.homepage          = "https://github.com/uias/Randient"
   s.license           = "MIT"
   s.author            = { "UI At Six" => "uias@sapsford.tech" }
-  s.social_media_url  = "http://twitter.com/uias"
+  s.social_media_url  = "http://twitter.com/MerrickSapsford"
 
   s.source       = { :git => "https://github.com/uias/Randient.git", :tag => s.version.to_s }
   s.source_files = "Sources/Randient/**/*.{h,m,swift}", "Sources/gen/*.{swift}"
