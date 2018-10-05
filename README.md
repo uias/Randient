@@ -27,8 +27,9 @@
 
 ## ⭐️ Features
 
-- [x] Automatically generated gradients from [uiGradients](https://uigradients.com) in Swift.
-- [x] Beautifully animateable, randomizable gradient views.
+- [x] Beautiful, automatically generated gradients from [uiGradients](https://uigradients.com) in Swift.
+- [x] Smoothly animating, randomizable gradient views.
+- [x] Life is like a box of chocolates.
 
 ## 📋 Requirements
 
