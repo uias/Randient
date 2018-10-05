@@ -28,7 +28,7 @@
 ## ⭐️ Features
 
 - [x] Automatically generated gradients from [uiGradients](https://uigradients.com) in Swift.
-- [x] Animateable, randomizable gradient views.
+- [x] Beautifully animateable, randomizable gradient views.
 
 ## 📋 Requirements
 
@@ -117,6 +117,7 @@ struct Metadata {
 
 ## 👨🏻‍💻 About
 - Created by [Merrick Sapsford](https://github.com/msaps) ([@MerrickSapsford](https://twitter.com/MerrickSapsford))
+- Heavily inspired by [UIColor-uiGradientsAdditions](https://github.com/kaiinui/UIColor-uiGradientsAdditions) by [kaiinui](https://github.com/kaiinui).
 
 ## ❤️ Contributing
 Bug reports and pull requests are welcome on GitHub at [https://github.com/uias/Randient](https://github.com/uias/Randient).
