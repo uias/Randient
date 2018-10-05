@@ -11,5 +11,4 @@ fi
 curl https://raw.githubusercontent.com/Ghosh/uiGradients/master/gradients.json | ruby $WORKING_DIR/parse.rb
 cp -rf $GEN_DIR $1
 rm -rf $GEN_DIR
-sleep 5
 echo 'Moving generated files to' $1
