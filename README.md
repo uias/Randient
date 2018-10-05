@@ -55,7 +55,7 @@ github "Randient"
 
 ## 🚀 Usage
 
-### Displaying a gradient
+### Gradient Roulette
 `RandientView` is a simple view that will display a randomly selected gradient from the [uiGradients](https://uigradients.com) catalog.
 
 ```swift
@@ -70,11 +70,11 @@ Updating to a new gradient is as simple as...
 randientView.randomize(animated: true)
 ```
 
-### Using the gradients
+### Those wonderful gradients
 
 An enum of all the gradients from [uiGradients](https://uigradients.com) is generated every time that Randient is built.
 
-These are available in `UIGradient`, and can be used as follows.
+These are available as `UIGradient`s.
 
 ```swift
 let gradient = UIGradient.royalBlue
@@ -106,7 +106,7 @@ struct Metadata {
 }
 ```
 
-### Gradient View extras
+### Gradient View
 
 `RandientView` inherits from `GradientView`, which under the hood uses simply uses a `CAGradientLayer` for rendering gradients.
 
