@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.social_media_url  = "http://twitter.com/MerrickSapsford"
 
   s.source       = { :git => "https://github.com/MerrickSapsford/Randient.git", :tag => s.version.to_s }
-  s.source_files = "Sources/Randient/**/*.{h,m,swift}", "Scripts/gen/*.{swift}"
+  s.source_files = "Sources/Randient/**/*.{h,m,swift}", "Sources/gen/*.{swift}"
 
   s.prepare_command = './Scripts/update.sh ./Sources'
 
