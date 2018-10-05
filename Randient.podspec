@@ -21,6 +21,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/MerrickSapsford/Randient.git", :tag => s.version.to_s }
   s.source_files = "Sources/Randient/**/*.{h,m,swift}", "Scripts/gen/*.{swift}"
 
-  s.prepare_command = './Scripts/update.sh'
+  s.prepare_command = './Scripts/update.sh ./Sources'
 
 end
