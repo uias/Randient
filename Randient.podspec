@@ -8,17 +8,17 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.version      = "0.1.0"
-  s.summary      = "Radient, random gradient views for iOS."
+  s.summary      = "Radient, random gradient views."
   s.description  = <<-DESC
-  					TODO
+  					Randomizable, animated gradients generated from uigradients.com.
                    DESC
 
-  s.homepage          = "https://github.com/MerrickSapsford/Randient"
+  s.homepage          = "https://github.com/uias/Randient"
   s.license           = "MIT"
-  s.author            = { "Merrick Sapsford" => "merrick@sapsford.tech" }
-  s.social_media_url  = "http://twitter.com/MerrickSapsford"
+  s.author            = { "UI At Six" => "uias@sapsford.tech" }
+  s.social_media_url  = "http://twitter.com/uias"
 
-  s.source       = { :git => "https://github.com/MerrickSapsford/Randient.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/uias/Randient.git", :tag => s.version.to_s }
   s.source_files = "Sources/Randient/**/*.{h,m,swift}", "Sources/gen/*.{swift}"
 
   s.prepare_command = './Scripts/update.sh ./Sources'
