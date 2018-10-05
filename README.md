@@ -74,7 +74,7 @@ randientView.randomize(animated: true)
 
 An enum of all the gradients from [uiGradients](https://uigradients.com) is generated every time that Randient is built.
 
-These are available as `UIGradient`s.
+These are available as an enum via `UIGradient`.
 
 ```swift
 let gradient = UIGradient.royalBlue
