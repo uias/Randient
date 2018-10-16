@@ -163,7 +163,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4639DD5421451CFA0038E5A6 /* Build configuration list for PBXNativeTarget "Randient" */;
 			buildPhases = (
-				46FB496A21453142005363F7 /* Load Latest Gradients */,
+				46FB496A21453142005363F7 /* Generate Gradients */,
 				4639DD4721451CFA0038E5A6 /* Sources */,
 				4639DD4821451CFA0038E5A6 /* Frameworks */,
 				4639DD4921451CFA0038E5A6 /* Headers */,
@@ -251,14 +251,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		46FB496A21453142005363F7 /* Load Latest Gradients */ = {
+		46FB496A21453142005363F7 /* Generate Gradients */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Load Latest Gradients";
+			name = "Generate Gradients";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
