@@ -14,12 +14,10 @@ open class GradientView: UIView {
     // MARK: Properties
     
     private var gradientLayer: CAGradientLayer? {
-        get {
-            if let gradientLayer = self.layer as? CAGradientLayer {
-                return gradientLayer
-            }
-            return nil
+        if let gradientLayer = self.layer as? CAGradientLayer {
+            return gradientLayer
         }
+        return nil
     }
     
     /// The colors that are currently active in the gradient. Animatable.

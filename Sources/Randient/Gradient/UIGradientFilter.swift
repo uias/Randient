@@ -17,7 +17,7 @@ public final class UIGradientFilter {
     
     // MARK: Properties
     
-    internal let id = NSUUID().uuidString
+    internal let identifier = NSUUID().uuidString
     internal let execution: Execution
     
     // MARK: Init
@@ -29,7 +29,7 @@ public final class UIGradientFilter {
 
 extension UIGradientFilter: Equatable {
     
-    public static func ==(lhs: UIGradientFilter, rhs: UIGradientFilter) -> Bool {
-        return lhs.id == rhs.id
+    public static func == (lhs: UIGradientFilter, rhs: UIGradientFilter) -> Bool {
+        return lhs.identifier == rhs.identifier
     }
 }

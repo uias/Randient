@@ -18,4 +18,3 @@ internal extension UIColor {
         return brightness >= 0.5
     }
 }
-
