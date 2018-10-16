@@ -18,6 +18,7 @@
 		46DBB9D9215173D40094B965 /* RandientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBB9D6215173D40094B965 /* RandientView.swift */; };
 		46DBB9DA215173D40094B965 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBB9D7215173D40094B965 /* GradientView.swift */; };
 		46DBB9DC215173E40094B965 /* UIColor+Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBB9DB215173E40094B965 /* UIColor+Interpolation.swift */; };
+		46E057A02175EDB5003FB809 /* UIGradientFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0579F2175EDB5003FB809 /* UIGradientFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		46DBB9D6215173D40094B965 /* RandientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandientView.swift; sourceTree = "<group>"; };
 		46DBB9D7215173D40094B965 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		46DBB9DB215173E40094B965 /* UIColor+Interpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Interpolation.swift"; sourceTree = "<group>"; };
+		46E0579F2175EDB5003FB809 /* UIGradientFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGradientFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				4639DD4F21451CFA0038E5A6 /* Randient.h */,
 				464BE4E221455020009B2A0D /* Randient.swift */,
 				46DBB9CD21516B290094B965 /* UIGradient+Metadata.swift */,
+				46E0579F2175EDB5003FB809 /* UIGradientFilter.swift */,
 				46DBB9D5215173D40094B965 /* Views */,
 				46DBB9D3215173D40094B965 /* Extensions */,
 				4639DD5021451CFA0038E5A6 /* Info.plist */,
@@ -264,6 +267,7 @@
 				4622FF9D216755D400214563 /* UIGradient.swift in Sources */,
 				46DBB9DC215173E40094B965 /* UIColor+Interpolation.swift in Sources */,
 				46DBB9CE21516B290094B965 /* UIGradient+Metadata.swift in Sources */,
+				46E057A02175EDB5003FB809 /* UIGradientFilter.swift in Sources */,
 				46DBB9D8215173D40094B965 /* UIColor+Analysis.swift in Sources */,
 				46DBB9DA215173D40094B965 /* GradientView.swift in Sources */,
 				464BE4E321455020009B2A0D /* Randient.swift in Sources */,
