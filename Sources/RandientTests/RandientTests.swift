@@ -13,7 +13,7 @@ class RandientTests: XCTestCase {
 
     func testNewGradientVerification() {
         let gradient = Randient.randomize()
-        let verifiedGradient = Randient.verifyNewGradient(gradient)
+        let verifiedGradient = Randient.verifyIsNewGradient(gradient)
         XCTAssertNil(verifiedGradient)
     }
 }
