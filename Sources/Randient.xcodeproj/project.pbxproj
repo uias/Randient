@@ -13,6 +13,7 @@
 		464BE4E321455020009B2A0D /* Randient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464BE4E221455020009B2A0D /* Randient.swift */; };
 		468EE01C2166A5A400C27982 /* RandientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468EE01B2166A5A400C27982 /* RandientTests.swift */; };
 		468EE01E2166A5A400C27982 /* Randient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4639DD4C21451CFA0038E5A6 /* Randient.framework */; };
+		46D87759218B51F800C83076 /* GradientView+UIGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D87758218B51F800C83076 /* GradientView+UIGradient.swift */; };
 		46DBB9D8215173D40094B965 /* UIColor+Analysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBB9D4215173D40094B965 /* UIColor+Analysis.swift */; };
 		46DBB9D9215173D40094B965 /* RandientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBB9D6215173D40094B965 /* RandientView.swift */; };
 		46DBB9DA215173D40094B965 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DBB9D7215173D40094B965 /* GradientView.swift */; };
@@ -41,6 +42,7 @@
 		468EE0192166A5A400C27982 /* RandientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		468EE01B2166A5A400C27982 /* RandientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandientTests.swift; sourceTree = "<group>"; };
 		468EE01D2166A5A400C27982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46D87758218B51F800C83076 /* GradientView+UIGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GradientView+UIGradient.swift"; sourceTree = "<group>"; };
 		46DBB9D4215173D40094B965 /* UIColor+Analysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Analysis.swift"; sourceTree = "<group>"; };
 		46DBB9D6215173D40094B965 /* RandientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandientView.swift; sourceTree = "<group>"; };
 		46DBB9D7215173D40094B965 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				46DBB9D6215173D40094B965 /* RandientView.swift */,
 				46DBB9D7215173D40094B965 /* GradientView.swift */,
+				46D87758218B51F800C83076 /* GradientView+UIGradient.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				46DBB9D8215173D40094B965 /* UIColor+Analysis.swift in Sources */,
 				46DBB9DA215173D40094B965 /* GradientView.swift in Sources */,
 				46E057A52175F2F1003FB809 /* UIGradient+Metadata.swift in Sources */,
+				46D87759218B51F800C83076 /* GradientView+UIGradient.swift in Sources */,
 				464BE4E321455020009B2A0D /* Randient.swift in Sources */,
 				46E057A42175F2F1003FB809 /* UIGradientFilter.swift in Sources */,
 				46DBB9D9215173D40094B965 /* RandientView.swift in Sources */,
