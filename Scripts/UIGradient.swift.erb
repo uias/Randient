@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIGradient {
+extension UIGradient {
 
     public struct Data {
         public let name: String
@@ -21,9 +21,9 @@ public enum UIGradient: CaseIterable {
     <% end -%>
 }
 
-public extension UIGradient {
+extension UIGradient {
 
-    var data: Data {
+    public var data: Data {
         switch self {
             <% @colors.each do |color| %>case .<%=color["camelized_name"]%>:
                 return Data(name: "<%=color["name"]%>", 

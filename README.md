@@ -6,7 +6,7 @@
     <a href="https://travis-ci.org/uias/Randient">
         <img src="https://travis-ci.org/uias/Randient.svg?branch=master" />
     </a>
-    <img src="https://img.shields.io/badge/Swift-4-orange.svg?style=flat" />
+    <img src="https://img.shields.io/badge/Swift-4 | 5-orange.svg?style=flat" />
     <a href="https://cocoapods.org/pods/Randient">
         <img src="https://img.shields.io/cocoapods/v/Randient.svg" alt="CocoaPods" />
     </a>
@@ -33,7 +33,7 @@
 
 ## 📋 Requirements
 
-iOS 9 & Swift 4.
+iOS 9 & Swift 4 / 5.
 
 ## 📲 Installation
 
