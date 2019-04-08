@@ -82,7 +82,7 @@ extension Randient {
     ///
     /// - Parameter filter: Filter to remove.
     public class func removeFilter(_ filter: UIGradientFilter) {
-        guard let index = Randient.filters.index(of: filter) else {
+        guard let index = Randient.filters.firstIndex(of: filter) else {
             return
         }
         Randient.filters.remove(at: index)
