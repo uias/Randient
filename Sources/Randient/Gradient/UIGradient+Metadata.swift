@@ -18,7 +18,7 @@ extension UIGradient {
     }
     
     /// Metadata about the gradient.
-    var metadata: Metadata {
+    public var metadata: Metadata {
         return Metadata(isPredominantlyLight: self.isLight)
     }
 }
