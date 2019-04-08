@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension GradientView {
+extension GradientView {
     
     /// Set a UIGradient.
     ///

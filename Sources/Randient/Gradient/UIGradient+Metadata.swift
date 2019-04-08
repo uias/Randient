@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIGradient {
+extension UIGradient {
     
     /// Gradient Metadata
     public struct Metadata {

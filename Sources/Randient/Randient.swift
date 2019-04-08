@@ -69,7 +69,7 @@ extension Randient {
 }
 
 // MARK: - Filtering
-public extension Randient {
+extension Randient {
     
     /// Add a new filter that is applied to the randomly selected gradients.
     ///
