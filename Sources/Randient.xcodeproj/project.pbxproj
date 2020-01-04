@@ -207,7 +207,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "UI At Six";
 				TargetAttributes = {
 					4639DD4B21451CFA0038E5A6 = {
@@ -226,6 +226,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 4639DD4221451CFA0038E5A6;
 			productRefGroup = 4639DD4D21451CFA0038E5A6 /* Products */;
@@ -283,6 +284,7 @@
 			);
 			name = "Generate Gradients";
 			outputPaths = (
+				"$(PROJECT_DIR)/gen/UIGradient.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
