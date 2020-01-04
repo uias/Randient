@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.version      = "1.3.0"
+  s.version      = "1.3.1"
   s.summary      = "Radient, random gradient views."
   s.description  = <<-DESC
   					Randomizable, animated gradients generated from uigradients.com.
