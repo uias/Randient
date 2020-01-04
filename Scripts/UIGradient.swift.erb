@@ -27,7 +27,7 @@ extension UIGradient {
         switch self {
             <% @colors.each do |color| %>case .<%=color["camelized_name"]%>:
                 return Data(name: "<%=color["name"]%>", 
-                            colors: [<% color["colors"].each do |hexString| %>ColorParser.parse(hexRGB: "<%=hexString %>"), <% end %>])
+                            colors: [<% color["colors"].each do |hexString| %>ColorParser.parse("<%=hexString %>"), <% end %>])
             <% end %>
         }
     }
@@ -35,14 +35,25 @@ extension UIGradient {
 
 private class ColorParser {
     
-    class func parse(hexRGB: String) -> UIColor {
-        return parse(hexRGBA: hexRGB + "ff")
-    }
-    
-    class func parse(hexRGBA: String) -> UIColor {
-        guard let val = Int(hexRGBA.replacingOccurrences(of: "#", with: ""), radix: 16) else {
-            fatalError("Failed to parse Color")
+    class func parse(_ hex: String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
         }
-        return UIColor.init(red: CGFloat((val >> 24) & 0xff) / 255.0, green: CGFloat((val >> 16) & 0xff) / 255.0, blue: CGFloat((val >> 8) & 0xff) / 255.0, alpha: CGFloat(val & 0xff) / 255.0)
+
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
 }
