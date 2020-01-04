@@ -3,7 +3,11 @@ Pod::Spec.new do |s|
   s.name         = "Randient"
 
   s.ios.deployment_target = '9.0'
-  s.swift_version = '4.0'
+  if s.respond_to? 'swift_versions'
+    s.swift_versions = ['4.0', '4.1', '4.2', '5.0']
+  else
+    s.swift_version = '4.0'
+  end
 
   s.requires_arc = true
 
