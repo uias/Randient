@@ -11,7 +11,7 @@ import UIKit
 internal extension UIColor {
     
     var isLight: Bool {
-        guard let components = cgColor.components else {
+        guard let components = cgColor.components, components.count >= 3 else {
             return false
         }
         let brightness = ((components[0] * 299) + (components[1] * 587) + (components[2] * 114)) / 1000
